@@ -1,0 +1,17 @@
+# Data
+data/raw/*.sqlite
+data/processed/*.sqlite
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+venv/
+
+# OS
+.DS_Store
