@@ -6,6 +6,7 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Status](https://img.shields.io/badge/status-work%20in%20progress-yellow?style=for-the-badge)
 
 ![Dataset Cover](assets/dataset-cover.jpg)
 
