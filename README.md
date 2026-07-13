@@ -7,7 +7,7 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-![Dataset Cover](https://storage.googleapis.com/kaggle-datasets-images/28667/36536/ea035b60de2d849c7878e7fb63a95425/dataset-cover.jpg?t=2018-10-29-23-23-32)
+![Dataset Cover](assets/dataset-cover.jpg)
 
 A data analysis project exploring customer sentiment toward major US airlines, based on tweets. The project covers data exploration, cleaning, and visualization using Python, pandas, and SQLite.
 
