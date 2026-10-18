@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airline Sentiment Dashboard</title>
+  <meta name="description" content="How travelers talked about six US airlines on Twitter in February 2015.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="static.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-stars" aria-hidden="true">★ ★ ★</div>
+      <h1>US Airline Sentiment</h1>
+      <p id="subtitle"></p>
+    </div>
+  </header>
+  <div class="stripes" aria-hidden="true"></div>
+
+  <main class="page">
+    <!-- One filter row that scopes everything below it -->
+    <form class="filters" id="filters" onsubmit="return false">
+      <div class="filter">
+        <label for="date-start">Date range</label>
+        <div class="date-range">
+          <input type="date" id="date-start" aria-label="Start date">
+          <span aria-hidden="true">→</span>
+          <input type="date" id="date-end" aria-label="End date">
+        </div>
+      </div>
+      <fieldset class="filter filter-wide">
+        <legend>Airlines</legend>
+        <div class="chips" id="airline-filter"></div>
+      </fieldset>
+      <fieldset class="filter">
+        <legend>Sentiment</legend>
+        <div class="checklist" id="sentiment-filter"></div>
+      </fieldset>
+      <button type="button" class="reset" id="reset">Reset</button>
+    </form>
+
+    <div class="tiles">
+      <div class="tile tile-blue"><div class="tile-label">Tweets</div><div class="tile-value" id="kpi-tweets"></div></div>
+      <div class="tile tile-red"><div class="tile-label">Negative share</div><div class="tile-value" id="kpi-negative"></div></div>
+      <div class="tile tile-blue"><div class="tile-label">Top complaint</div><div class="tile-value" id="kpi-reason"></div></div>
+      <div class="tile tile-red"><div class="tile-label">Most negative airline</div><div class="tile-value" id="kpi-airline"></div></div>
+    </div>
+
+    <section class="insights-section">
+      <h2 class="section-title">Key insights</h2>
+      <div class="insights" id="insights"></div>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Sentiment mix by airline</h2>
+        <p class="card-subtitle">Share of each airline's tweets</p>
+        <div class="chart" id="chart-sentiment"></div>
+      </div>
+      <div class="card">
+        <h2>Why passengers complain</h2>
+        <p class="card-subtitle">Reasons given in negative tweets</p>
+        <div class="chart" id="chart-reasons"></div>
+      </div>
+      <div class="card">
+        <h2>Tweets per day</h2>
+        <p class="card-subtitle">Daily volume by sentiment</p>
+        <div class="chart" id="chart-time"></div>
+      </div>
+      <div class="card">
+        <h2>Where tweets come from</h2>
+        <p class="card-subtitle">Top 10 user locations</p>
+        <div class="chart" id="chart-locations"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>The numbers behind the charts</h2>
+      <p class="card-subtitle">Tweets by airline and sentiment – click a header to sort</p>
+      <div class="table-wrap">
+        <table class="summary" id="summary-table">
+          <thead><tr></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      Data: <a href="https://www.kaggle.com/datasets/welkin10/airline-sentiment">Airline Sentiment (Kaggle)</a>
+      · Built with Plotly.js
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.1.0/plotly-basic.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* Additions for the static (GitHub Pages) version – shared styles live in style.css */
+
+fieldset.filter {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.filter legend {
+  padding: 0;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--old-glory-blue);
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.date-range input {
+  font: inherit;
+  font-size: 15px;
+  padding: 7px 10px;
+  border: 1px solid #c9cbd8;
+  border-radius: 8px;
+  color: var(--text-primary);
+  background: var(--surface);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid #c9cbd8;
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.chip:hover { border-color: var(--old-glory-blue); }
+
+.chip[aria-pressed="true"] {
+  background: var(--old-glory-blue);
+  border-color: var(--old-glory-blue);
+  color: var(--white);
+}
+
+.checklist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reset {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--old-glory-red);
+  background: var(--surface);
+  color: var(--old-glory-red);
+  cursor: pointer;
+}
+
+.reset:hover { background: #fdf2f3; }
+
+.chip:focus-visible, .reset:focus-visible, .date-range input:focus-visible, .summary th button:focus-visible {
+  outline: 2px solid var(--flag-blue);
+  outline-offset: 2px;
+}
+
+.chart { height: 360px; }
+
+.is-updating .chart { opacity: 0.6; }
+
+/* ---------- Table view */
+.table-wrap { overflow-x: auto; }
+
+.summary {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary th, .summary td {
+  padding: 10px 14px;
+  text-align: right;
+  border-bottom: 1px solid #e6e7ef;
+  white-space: nowrap;
+}
+
+.summary th:first-child, .summary td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.summary thead th {
+  background: var(--old-glory-blue);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0;
+}
+
+.summary th button {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.summary th button::after { content: " ↕"; opacity: 0.5; }
+.summary th[aria-sort="ascending"] button::after { content: " ↑"; opacity: 1; }
+.summary th[aria-sort="descending"] button::after { content: " ↓"; opacity: 1; }
+
+.summary tbody tr:nth-child(even) { background: #f6f7fb; }
+
+footer a { color: inherit; }
+
+@media (max-width: 560px) {
+  .chart { height: 320px; }
+}

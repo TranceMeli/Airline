@@ -1,6 +1,12 @@
-# Data
-data/raw/*.sqlite
-data/processed/*.sqlite
+# Data (download from Kaggle, see README)
+Tweets.csv
+data/**/*.csv
+data/**/*.sqlite
+*.sqlite-journal
+
+# Secrets
+.env
+kaggle.json
 
 # Jupyter
 .ipynb_checkpoints/
@@ -13,5 +19,11 @@ __pycache__/
 .venv/
 venv/
 
+# Editors
+.vscode/
+.idea/
+
 # OS
 .DS_Store
+Thumbs.db
+desktop.ini

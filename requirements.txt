@@ -1,0 +1,7 @@
+pandas
+numpy
+matplotlib
+seaborn>=0.13
+plotly>=6
+dash>=3
+jupyter
